@@ -1,7 +1,10 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
+import { PokemonList } from './pokemon.model';
 
 export const getPokemon = createAction('[Pokemon] Get Pokemon');
-export const getPokemonSuccess = createAction('[Pokemon] Get Pokemon Success', (pokemon: PokemonList) => ({ pokemon }));
-export const getPokemonFail = createAction('[Pokemon] Get Pokemon Fail', (error: Error) => ({ error }));
+export const getPokemonSuccess = createAction('[Pokemon] Get Pokemon Success', props<{ pokemon: PokemonList }>());
+export const getPokemonFailure = createAction('[Pokemon] Get Pokemon Fail');
 
-export const getPokemonLoading = createAction('[Pokemon] Get Pokemon Loading');
+export const deletePokemon = createAction('[Pokemon] Delete Pokemon', props<{ name: string }>());
+export const deletePokemonSuccess = createAction('[Pokemon] Delete Pokemon Success', props<{ name: string }>());
+export const deletePokemonFailure = createAction('[Pokemon] Delete Pokemon Fail');

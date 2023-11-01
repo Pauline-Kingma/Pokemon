@@ -15,8 +15,8 @@
         "HP": 35,
         "Attack": 55,
         "Defense": 40,
-        "Special Attack": 50,
-        "Special Defense": 50,
+        "SpecialAttack": 50,
+        "SpecialDefense": 50,
         "Speed": 90
       },
       "evolutions": [
@@ -42,8 +42,8 @@
         "HP": 78,
         "Attack": 84,
         "Defense": 78,
-        "Special Attack": 109,
-        "Special Defense": 85,
+        "SpecialAttack": 109,
+        "SpecialDefense": 85,
         "Speed": 100
       },
       "evolutions": [
@@ -73,8 +73,8 @@
         "HP": 45,
         "Attack": 49,
         "Defense": 49,
-        "Special Attack": 65,
-        "Special Defense": 65,
+        "SpecialAttack": 65,
+        "SpecialDefense": 65,
         "Speed": 45
       },
       "evolutions": [
@@ -104,8 +104,8 @@
         "HP": 44,
         "Attack": 48,
         "Defense": 65,
-        "Special Attack": 50,
-        "Special Defense": 64,
+        "SpecialAttack": 50,
+        "SpecialDefense": 64,
         "Speed": 43
       },
       "evolutions": [
@@ -135,8 +135,8 @@
         "HP": 115,
         "Attack": 45,
         "Defense": 20,
-        "Special Attack": 45,
-        "Special Defense": 25,
+        "SpecialAttack": 45,
+        "SpecialDefense": 25,
         "Speed": 20
       },
       "evolutions": [
@@ -162,8 +162,8 @@
         "HP": 70,
         "Attack": 80,
         "Defense": 50,
-        "Special Attack": 35,
-        "Special Defense": 35,
+        "SpecialAttack": 35,
+        "SpecialDefense": 35,
         "Speed": 35
       },
       "evolutions": [
@@ -193,8 +193,8 @@
         "HP": 40,
         "Attack": 80,
         "Defense": 100,
-        "Special Attack": 30,
-        "Special Defense": 30,
+        "SpecialAttack": 30,
+        "SpecialDefense": 30,
         "Speed": 20
       },
       "evolutions": [
@@ -224,8 +224,8 @@
         "HP": 40,
         "Attack": 45,
         "Defense": 40,
-        "Special Attack": 35,
-        "Special Defense": 35,
+        "SpecialAttack": 35,
+        "SpecialDefense": 35,
         "Speed": 56
       },
       "evolutions": [
@@ -254,8 +254,8 @@
         "HP": 30,
         "Attack": 35,
         "Defense": 30,
-        "Special Attack": 100,
-        "Special Defense": 35,
+        "SpecialAttack": 100,
+        "SpecialDefense": 35,
         "Speed": 80
       },
       "evolutions": [
@@ -285,8 +285,8 @@
         "HP": 35,
         "Attack": 45,
         "Defense": 160,
-        "Special Attack": 30,
-        "Special Defense": 45,
+        "SpecialAttack": 30,
+        "SpecialDefense": 45,
         "Speed": 70
       },
       "evolutions": [
@@ -312,8 +312,8 @@
         "HP": 60,
         "Attack": 48,
         "Defense": 45,
-        "Special Attack": 43,
-        "Special Defense": 90,
+        "SpecialAttack": 43,
+        "SpecialDefense": 90,
         "Speed": 42
       },
       "evolutions": [
@@ -339,8 +339,8 @@
         "HP": 30,
         "Attack": 105,
         "Defense": 90,
-        "Special Attack": 25,
-        "Special Defense": 25,
+        "SpecialAttack": 25,
+        "SpecialDefense": 25,
         "Speed": 50
       },
       "evolutions": [

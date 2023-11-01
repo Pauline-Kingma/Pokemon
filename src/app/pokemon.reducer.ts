@@ -3,15 +3,17 @@ import * as fromActions from './pokemon.actions';
 import { PokemonList } from './pokemon.model';
 
 export interface PokemonState {
-  pokemon: PokemonList | undefined;
+  pokemonList: PokemonList;
   loading: boolean;
-  error: Error | undefined;
+  error: boolean;
 }
 
 const initialState: PokemonState = {
-  pokemon: undefined,
+  pokemonList: {
+    pokemon: []
+  },
   loading: false,
-  error: undefined
+  error: false
 };
 
 export const pokemonReducer = createReducer(
@@ -27,16 +29,28 @@ export const pokemonReducer = createReducer(
   on(fromActions.getPokemonSuccess, (state, { pokemon }) => (
     {
       ...state,
-      pokemon,
+      pokemonList: pokemon,
       loading: false
     }
   )),
 
-  on(fromActions.getPokemonFail, (state, { error }) => (
+  on(fromActions.getPokemonFailure, state => (
     {
       ...state,
-      error,
+      error: true,
       loading: false
     }
-  ))
+  )),
+
+  on(fromActions.deletePokemonSuccess, (state, { name }) => {
+    const newList = state.pokemonList.pokemon.filter(pokemon => pokemon.name !== name);
+    console.log(newList.length);
+    return {
+      ...state,
+      pokemonList: {
+        ...state.pokemonList,
+        pokemon: newList
+      }
+    }
+  }),
 );

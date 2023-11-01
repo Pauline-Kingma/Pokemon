@@ -1,4 +1,4 @@
-interface Pokemon {
+export interface Pokemon {
   name: string;
   type: string | string[];
   size: {
@@ -21,6 +21,6 @@ interface Pokemon {
   description: string;
 }
 
-interface PokemonList {
+export interface PokemonList {
   pokemon: Pokemon[];
 }
