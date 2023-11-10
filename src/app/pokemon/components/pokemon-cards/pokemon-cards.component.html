@@ -1,0 +1,36 @@
+<ng-container *ngIf="{
+  pokemon: pokemon$ | async,
+  loading: loading$ | async,
+} as obs">
+  <div class="cards" *ngIf="!obs.loading">
+    <div class="card" *ngFor="let pokemon of pokemon$ | async">
+      <div class="title">
+        <div class="name">{{pokemon.name}}</div>
+        <button (click)="onDeletePokemon(pokemon)">X</button>
+      </div>
+      <img
+        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/' + pokemon.id + '.png'">
+      <div class="type">Type: {{pokemon.type}}</div>
+      <div class="size">Length: {{pokemon.size.height}}</div>
+      <div class="weight">Weight: {{pokemon.size.weight}}</div>
+      <div class="abilities">Abilities: {{pokemon.abilities.join(', ')}}</div>
+      <div class="label">Stats</div>
+      <div class="stats">
+        <div class="part-stats">
+          <div class="stat">HP: {{pokemon.base_stats.HP}}</div>
+          <div class="stat">Attack: {{pokemon.base_stats.Attack}}</div>
+          <div class="stat">Defense: {{pokemon.base_stats.Defense}}</div>
+        </div>
+        <div class="part-stats">
+          <div class="stat">Special Attack: {{pokemon.base_stats.SpecialAttack}}</div>
+          <div class="stat">Special Defense: {{pokemon.base_stats.SpecialDefense}}</div>
+          <div class="stat">Speed: {{pokemon.base_stats.Speed}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loading" *ngIf="obs.loading">
+    <div class="spinner"></div>
+  </div>
+
+</ng-container>

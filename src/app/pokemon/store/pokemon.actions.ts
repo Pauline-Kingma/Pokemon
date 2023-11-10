@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { PokemonList } from './pokemon.model';
+import { PokemonList } from '../models/pokemon.model';
 
 export const getPokemon = createAction('[Pokemon] Get Pokemon');
 export const getPokemonSuccess = createAction('[Pokemon] Get Pokemon Success', props<{ pokemon: PokemonList }>());

@@ -1,35 +1,5 @@
-<ng-container *ngIf="{
-  pokemon: pokemon$ | async,
-  loading: loading$ | async,
-} as obs">
-
-  <div class="cards" *ngIf="!obs.loading">
-    <div class="card" *ngFor="let pokemon of pokemon$ | async">
-      <div class="title">
-        <div class="name">{{pokemon.name}}</div>
-        <button (click)="onDeletePokemon(pokemon)">X</button>
-      </div>
-      <div class="type">Type: {{pokemon.type}}</div>
-      <div class="size">Lengte: {{pokemon.size.height}}</div>
-      <div class="weight">Gewicht: {{pokemon.size.weight}}</div>
-      <div class="abilities">Abilities: {{pokemon.abilities.join(', ')}}</div>
-      <div class="label">Stats</div>
-      <div class="stats">
-        <div class="part-stats">
-          <div class="stat">HP: {{pokemon.base_stats.HP}}</div>
-          <div class="stat">Attack: {{pokemon.base_stats.Attack}}</div>
-          <div class="stat">Defense: {{pokemon.base_stats.Defense}}</div>
-        </div>
-        <div class="part-stats">
-          <div class="stat">Special Attack: {{pokemon.base_stats.SpecialAttack}}</div>
-          <div class="stat">Special Defense: {{pokemon.base_stats.SpecialDefense}}</div>
-          <div class="stat">Speed: {{pokemon.base_stats.Speed}}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="loading" *ngIf="obs.loading">
-    <div class="spinner"></div>
-  </div>
-
-</ng-container>
+<div class="body">
+  <div class="title">POCémon</div>
+  <pok-pokemon-count></pok-pokemon-count>
+  <pok-pokemon-cards> </pok-pokemon-cards>
+</div>

@@ -1,0 +1,3 @@
+<ng-container *ngIf="pokemon$ | async as pokemon">
+  <div class='count'>Total count: {{pokemon ? this.pokemon.length : 0}}</div>
+</ng-container>

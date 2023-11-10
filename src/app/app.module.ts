@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonStoreModule } from './pokemon.module';
-import { EffectsModule } from '@ngrx/effects';
-import { PokemonEffects } from './pokemon.effects';
-import { PokemonService } from './pokemon.service';
+import { PokemonCardsComponent } from './pokemon/components/pokemon-cards/pokemon-cards.component';
+import { PokemonCountComponent } from './pokemon/components/pokemon-count/pokemon-count.component';
+import { PokemonService } from './pokemon/services/pokemon.service';
+import { PokemonEffects } from './pokemon/store/pokemon.effects';
+import { PokemonStoreModule } from './pokemon/store/pokemon.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonCardsComponent,
+    PokemonCountComponent
   ],
   imports: [
     BrowserModule,
