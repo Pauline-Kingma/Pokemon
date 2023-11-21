@@ -24,6 +24,6 @@ export class PokemonCardsComponent implements OnInit {
   }
 
   onDeletePokemon(pokemon: Pokemon) {
-    this.store.dispatch(fromActions.deletePokemon({ name: pokemon.name }));
+    this.store.dispatch(fromActions.deletePokemon({ id: pokemon.id }));
   }
 }

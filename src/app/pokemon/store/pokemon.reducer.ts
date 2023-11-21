@@ -42,9 +42,8 @@ export const pokemonReducer = createReducer(
     }
   )),
 
-  on(fromActions.deletePokemonSuccess, (state, { name }) => {
-    const newList = state.pokemonList.pokemon.filter(pokemon => pokemon.name !== name);
-    console.log(newList.length);
+  on(fromActions.deletePokemonSuccess, (state, { id }) => {
+    const newList = state.pokemonList.pokemon.filter(pokemon => pokemon.id !== id);
     return {
       ...state,
       pokemonList: {

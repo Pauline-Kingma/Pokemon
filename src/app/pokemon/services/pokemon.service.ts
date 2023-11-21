@@ -13,8 +13,8 @@ export class PokemonService {
     return of(pokemonMock as any as PokemonList);
   }
 
-  deletePokemon(name: string): Observable<Object> {
-    console.log('deletePokemonInService', name);
+  deletePokemon(id: number): Observable<Object> {
+    console.log('deletePokemonInService', id);
     return of({});
   }
 }

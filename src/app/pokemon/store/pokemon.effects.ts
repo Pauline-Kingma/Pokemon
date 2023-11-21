@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, delay, map, switchMap } from 'rxjs/operators';
 import * as fromActions from './pokemon.actions';
 import { PokemonService } from '../services/pokemon.service';
 
@@ -25,8 +25,8 @@ export class PokemonEffects {
 
   deletePokemon$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.deletePokemon),
-    switchMap(action => this.pokemonService.deletePokemon(action.name).pipe(
-      map(() => fromActions.deletePokemonSuccess({ name: action.name })),
+    switchMap(action => this.pokemonService.deletePokemon(action.id).pipe(
+      map(() => fromActions.deletePokemonSuccess({ id: action.id })),
       catchError(() => of(fromActions.deletePokemonFailure()))
     ))
   ));
