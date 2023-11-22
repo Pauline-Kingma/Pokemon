@@ -1,8 +1,9 @@
 <ng-container *ngIf="{
   pokemon: pokemon$ | async,
   loading: loading$ | async,
+  error: error$ | async
 } as obs">
-  <div class="cards" *ngIf="!obs.loading">
+  <div class="cards" *ngIf="!obs.loading && !obs.error">
     <div class="card" *ngFor="let pokemon of pokemon$ | async">
       <div class="title">
         <div class="name">{{pokemon.name}}</div>
@@ -31,6 +32,9 @@
   </div>
   <div class="loading" *ngIf="obs.loading">
     <div class="spinner"></div>
+  </div>
+  <div class="error" *ngIf="obs.error">
+    <div class="error">Critical hit</div>
   </div>
 
 </ng-container>

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from '../../models/pokemon.model';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import * as fromActions from '../../../pokemon/store/pokemon.actions';
 import * as fromSelectors from '../../../pokemon/store/pokemon.selectors';
+import { Pokemon } from '../../models/pokemon.model';
 
 @Component({
   selector: 'pok-pokemon-cards',
@@ -13,6 +13,7 @@ import * as fromSelectors from '../../../pokemon/store/pokemon.selectors';
 export class PokemonCardsComponent implements OnInit {
   pokemon$: Observable<Pokemon[] | undefined> | undefined = undefined;
   loading$: Observable<boolean> | undefined = undefined;
+  error$: Observable<boolean> | undefined = undefined;
 
   constructor(private readonly store: Store) { }
 
@@ -21,6 +22,7 @@ export class PokemonCardsComponent implements OnInit {
 
     this.pokemon$ = this.store.select(fromSelectors.getPokemon);
     this.loading$ = this.store.select(fromSelectors.getLoading);
+    this.error$ = this.store.select(fromSelectors.getError);
   }
 
   onDeletePokemon(pokemon: Pokemon) {

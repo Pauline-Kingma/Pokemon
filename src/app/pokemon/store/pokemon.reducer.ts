@@ -10,7 +10,8 @@ export interface PokemonState {
 
 const initialState: PokemonState = {
   pokemonList: {
-    pokemon: []
+    pokemon: [],
+    totalCount: 0
   },
   loading: false,
   error: false
@@ -48,8 +49,11 @@ export const pokemonReducer = createReducer(
       ...state,
       pokemonList: {
         ...state.pokemonList,
-        pokemon: newList
+        pokemon: newList,
+        totalCount: state.pokemonList.totalCount - 1
       }
     }
   }),
 );
+
+export const reducers = (state: PokemonState, action: any) => pokemonReducer(state, action);

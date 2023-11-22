@@ -24,4 +24,5 @@ export interface Pokemon {
 
 export interface PokemonList {
   pokemon: Pokemon[];
+  totalCount: number;
 }
