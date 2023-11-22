@@ -15,6 +15,5 @@ export class PokemonCountComponent implements OnInit {
 
   ngOnInit(): void {
     this.totalCount$ = this.store.select(getTotalCount);
-    this.totalCount$.subscribe(count => console.log(count));
   }
 }
